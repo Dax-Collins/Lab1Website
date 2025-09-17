@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bio — Dax Collins</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .bio-wrap{
+      width: min(1200px, 92vw);
+      margin: 0 auto;
+      display: grid;
+      gap: 28px;
+      grid-template-columns: 1.2fr 0.9fr;
+      align-items: start;
+    }
+
+    .bio-text h1{ margin: 0 0 8px; font-size: clamp(2rem, 4.8vw, 2.8rem); }
+    .bio-text .lead{ margin: 0 0 18px; color: var(--muted); }
+
+    .bio-spot{
+      width: 100%;
+      aspect-ratio: 3 / 4;           
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: radial-gradient(120% 120% at 20% 20%, rgba(34,211,238,.18), transparent 60%),
+                  var(--surface);
+      display: grid;
+      place-items: center;
+    }
+    .bio-spot img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;              
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <aside class="side-nav">
+    <a class="nav-logo" href="index.html">Home</a>
+    <nav class="nav-links">
+      <a class="active" href="bio.html">Bio</a>
+      <a href="photos.html">Photos</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="personalPhoto">
+    <div class="personalPhoto-inner bio-wrap">
+      <section class="bio-text">
+        <h1>Bio</h1>
+        <p class="lead">Some things about me</p>
+
+        <p>
+          I am a Computer Science major who enjoys game development, learning new programming langauges,
+          and working on cool projects.
+        </p>
+        <p>
+          Outside of coding, I enjoying being outdoors and my favorite sport is soccer. I also love the color
+          blue and am a member of a local fraternity.
+        </p>
+
+        <ul>
+          <li><strong>Focus:</strong> Unity, Game Developlemnt and App Development </li>
+          <li><strong>Tools:</strong> C/C++, HTML/CSS, Firebase, and VS Code</li>
+          <li><strong>Goal:</strong> Make amazing projects</li>
+        </ul>
+      </section>
+
+      <aside class="bio-spot" aria-label="Bio photo">
+        <img src="C:\Users\daxco\Downloads\IMG_4066.jpeg"/>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
+

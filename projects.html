@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cards{ display:grid; gap:18px; grid-template-columns:1fr; }
+    .card{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow); }
+    .card h3{ margin:0 0 6px; }
+    .tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .tag{ padding:4px 8px; border-radius:999px; border:1px solid var(--border); font-size:.85rem; }
+    .card a{ text-decoration:none; }
+  </style>
+</head>
+<body>
+  <aside class="side-nav">
+    <a class="nav-logo" href="index.html">Home</a>
+    <nav class="nav-links">
+      <a href="bio.html">Bio</a>
+      <a href="photos.html">Photos</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="personalPhoto">
+    <div class="personalPhoto-inner">
+      <div class="text">
+        <h1>Projects</h1>
+        <p class="tagline">Some things I have worked on</p>
+      </div>
+
+      <section class="cards">
+        <article class="card">
+          <h3>Golf Scramble App</h3>
+          <p>Team creation, live Firestore updates, and a scores screen for tournaments.</p>
+          <div class="tags"><span class="tag">Unity</span><span class="tag">Firebase</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Planet Pop Game</h3>
+          <p>Time-based tapping mobile game for IOS</p>
+          <div class="tags"><span class="tag">Gaming</span><span class="tag">IOS</span></div>
+        </article>
+
+        <article class="card">
+          <h3>LibFuzzer Demo</h3>
+          <p>Slides + demo showing coverage-guided fuzzing and crash reproduction.</p>
+          <div class="tags"><span class="tag">Security</span><span class="tag">Clang</span></div>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
