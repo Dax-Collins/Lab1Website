@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="border-bottom bg-body sticky-top">
+    <nav class="navbar navbar-expand-lg">
+       <div class="container justify-content-center">
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center w-100" id="nav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="bio.html">Bio</a></li>
+            <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" href="signin.html">Sign In</a></li>
+            <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container py-5" style="max-width: 500px;">
+    <h1 class="mb-4 text-center">Sign In</h1>
+    <form class="card p-4 shadow-sm needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="signinEmail" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="signinEmail" placeholder="you@email.com" required>
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+      <div class="mb-3">
+        <label for="signinPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="signinPassword" minlength="1" required>
+        <div class="invalid-feedback">Password must be at least 1 characters.</div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <a href="#" class="small">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 mt-3">Sign In</button>
+    </form>
+  </main>
+  <footer class="bg-light text-lg-start border-top fixed-bottom">
+    <ul class="nav ps-3">
+      <li class="nav-item">
+        <a class="nav-link text-muted" href="terms.html">Terms and Conditions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-muted" href="privacy.html">Privacy Policy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-muted" href="cookies.html">Cookies</a>
+      </li>
+    </ul>
+  <div class="text-muted small pb-2 ps-2">
+    Copyright @2025 Dax Collins
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+</body>
+</html>
